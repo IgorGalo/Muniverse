@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/scriptGeral.js"></script>
+    <link rel="stylesheet" href="../formatacao.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/cadastro_login.css">
+    <title>MUNIVERSE - Cadastro</title>
+</head>
+
+<body>
+    <div id="barrinha">
+        
+        <img id="logo" src="../image/logoBarra.png" alt="oi" style="text-align: left;">
+        <a target="_self">
+            <input  class="BtnInativo" id="BtnCad" type="submit" value="Cadastrar">
+        </a>
+        <a href="login.html" target="_self">
+            <input class="botoesBarrinha" id="BtnEnt" type="submit" value="Entrar">
+        </a>
+    </div>
+
+    <div id="divcentro">
+        <div id="divdentro">
+            <h2 class="titulo">CADASTRAR</h2>
+            <form action="../php/inserir_user.php" method="post">
+
+                <label class="labelCadLog" for="txtNomeC">Nome Completo</label>
+                <br>
+                <input required type="text" name="txtNomeC" id="txtNomeC">
+
+                <br><br><br>
+                <label class="labelCadLog" for="txtNomeUser">Nome de Usuário</label>
+                <br>
+
+                <input required type="text" name="txtNomeUser" id="txtNomeUser" min="3">
+                <br><br><br>
+
+                <label class="labelCadLog" for="txtEmail">E-mail</label>
+                <br>
+                <input required type="email" name="txtEmail" id="txtEmail">
+                <br><br><br>
+
+                <label class="labelCadLog" for="txtSenha">Senha</label>
+                <br>
+                <input required type="password" name="txtSenha" id="txtSenha">
+                <br><br><br>
+
+                <label class="labelCadLog" for="txtData">Nascimento</label>
+                <label class="labelCadLog" for="txtCpf" id="CpfTtCad">CPF</label>
+                <br>
+
+                <div class="inputClasse">
+                <input required type="date" name="txtData" id="txtData">
+                <input required name="txtCpf" id="txtCpf">
+                </div>
+                
+                <br><br><br>
+                <input id="BtnEnvio" type="submit" value="Cadastrar">
+
+            </form>
+            
+        </div>
+    </div>
+<script>
+    const Dataatual = new Date();
+const ano = Dataatual.getFullYear();
+let mes = Dataatual.getMonth() + 1; //Mês começa em 0
+let dia = Dataatual.getDate();
+if (dia < 10) { dia = '0' + dia; }
+if (mes < 10) { mes = '0' + mes; }
+const DataMax = ano + '-' + mes + '-' + dia;
+console.log(DataMax)
+const DataIni = ano-10 + '-' + mes + '-' + dia;
+document.getElementById('txtData').setAttribute('value', DataIni);
+document.getElementById('txtData').setAttribute('max', DataMax);
+</script>
+</body>
+
+</html>

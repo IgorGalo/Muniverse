@@ -1,0 +1,125 @@
+:root {
+    --cor1: #C1D9E1;
+    --cor2: #348498;
+    --cor3: #0C7B93;
+    --cor4: #006270;
+    --cor5: #004D61;
+    --cor6: #d21c31;
+    --over: hidden;
+}
+
+.central {
+    display: flex;
+    justify-content: center;
+    /* Centraliza a div horizontalmente */
+    align-items: center;
+    /* Centraliza a div verticalmente */
+}
+
+.containerInsc {
+    max-width: 75%;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    /* Garante que os elementos dentro da div sejam centralizados */
+    display: flex;
+    flex-direction: column;
+    /* Organiza os itens verticalmente */
+    align-items: center;
+    /* Centraliza os radio buttons horizontalmente */
+    margin-top: 50px;
+}
+
+.tituh2 {
+    text-align: center;
+    color: var(--cor4);
+    font-size: 40px;
+}
+
+label {
+    display: block;
+    margin-top: 3px;
+    color: var(--cor4);
+}
+
+input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+    /* Ajuste o espaÃ§amento entre os radio buttons */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #006270;
+    color: #C1D9E1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004D61;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza os itens dentro da div */
+    margin-top: 10px;
+}
+
+.terms input {
+    margin-right: 5px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.radio-container label {
+    margin-left: 5px;
+    color: var(--cor4);
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* Alinha o texto e o checkbox Ã  esquerda */
+    gap: 8px;
+    /* EspaÃ§amento entre o checkbox e o texto */
+    margin-top: 10px;
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte */
+    color: #333;
+    /* Cor do texto */
+}

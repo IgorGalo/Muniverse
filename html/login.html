@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../formatacao.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/cadastro_login.css">
+    <script src="../script/scriptGeral.js"></script>
+    <title>MUNIVERSE - Login</title>
+</head>
+
+<body>
+
+    <div id="barrinha">
+        <img id="logo" src="../image/logoBarra.png" alt="oi" style="text-align: left;">
+        <a href="cadastro.html" target="_self">
+            <input id="BtnCad" type="submit" value="Cadastrar">
+        </a>
+        <a target="_self">
+            <input class="BtnInativo" id="BtnEnt" type="submit" value="Entrar">
+        </a>
+    </div>
+
+    <div id="divcentro">
+        <div id="divdentro">
+            <h2 class="titulo">LOGIN</h2>
+            <form action="../php/login.php" method="post">
+                <label class="labelCadLog" for="NomeUsertxt">E-mail ou Nome de Usuário</label>
+                <br>
+                <input required type="text" name="NomeUsertxt" id="NomeUsertxt"> <!-- Mantendo o nome original -->
+                <br><br><br>
+
+                <label class="labelCadLog" for="Senhatxt" id="margSenhaTt">Senha</label>
+                <br>
+                <input required type="password" name="Senhatxt" id="Senhatxt"> <!-- Mantendo o nome original -->
+                <br><br><br>
+
+                <input id="BtnEnvio" type="submit" value="Entrar"> <!-- Mantendo type="submit" -->
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

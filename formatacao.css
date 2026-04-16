@@ -1,0 +1,1088 @@
+/*-----Gerais-----*/
+
+:root {
+    --cor1: #C1D9E1;
+    --cor2: #348498;
+    --cor3: #0C7B93;
+    --cor4: #006270;
+    --cor5: #004D61;
+    --cor6: #d21c31;
+    --over: hidden;
+}
+
+h1 {
+    color: var(--cor1);
+}
+
+body {
+    background:
+        url(image/fundo.png) no-repeat top left / cover fixed;
+    color: var(--cor5);
+    overflow: auto;
+    user-select: none
+}
+
+
+.BodyChat {
+    overflow: var(--over);
+}
+
+
+/*--------------*/
+
+
+.tabela-arquivos {
+    margin: 0 auto;
+    /* Centraliza a tabela */
+    width: 100%;
+    /* ou ajuste conforme necessário */
+    text-align: center;
+}
+
+.centralizada {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#BtnCad {
+    left: 86%;
+}
+
+#BtnEnt {
+    left: 92%;
+}
+
+
+#tdBx {
+    background-color: var(--cor2);
+
+}
+
+th {
+    color: var(--cor1);
+    background-color: var(--cor4);
+}
+
+#BaixarBtn {
+    height: 2rem;
+    width: 5rem;
+    margin: 0;
+    cursor: pointer;
+    color: var(--cor1);
+    background-color: var(--cor2);
+    border-style: solid;
+    border-color: var(--cor2);
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    #BtnCad {
+        left: 73%;
+    }
+
+    #BtnEnt {
+        left: 85%;
+    }
+
+}
+
+#DefaultUser {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100%;
+    font-size: 1.5rem;
+    left: 5.2rem;
+    position: absolute;
+    bottom: 3.3rem;
+    cursor: pointer;
+    /* Tornando clicável */
+    display: flex;
+    align-items: center;
+    /* Alinha o texto e o triângulo na mesma linha */
+}
+
+#DefaultUser::after {
+    content: "";
+    display: inline-block;
+    margin-left: 4px;
+    /* Espaço entre o texto e o triângulo */
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid var(--cor5);
+    /* Cor do triângulo */
+    transition: transform 0.3s ease;
+}
+
+#DefaultUser.open::after {
+    transform: rotate(180deg);
+    /* Gira o triângulo para cima */
+}
+
+.barra {
+    background-color: var(--cor1);
+    height: 100%;
+    width: 18.75rem;
+    position: fixed;
+    transition: all .2s linear;
+    left: -18.75rem;
+    margin-top: 1.25rem;
+    position: absolute;
+    z-index: 9999;
+}
+
+#check:checked~.barra {
+    transform: translateX(+18.75rem);
+}
+
+.itens {
+    margin-top: 3.125rem;
+    margin-left: 0.625rem;
+    font-size: 1.25rem;
+}
+
+.item {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+    margin-left: 0.625rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    height: 0.625rem;
+    width: 18.75rem;
+    text-decoration: none;
+    color: var(--cor4);
+    font-family: "Open Sans", sans-serif;
+}
+
+#userImg {
+    cursor: pointer;
+}
+
+.user-frame {
+    position: absolute;
+    height: 4rem;
+    width: 4rem;
+    border-color: var(--cor4);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--cor2);
+    bottom: 3.5rem;
+}
+
+.user-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+.BtnInativo {
+    background-color: var(--cor1);
+    color: var(--cor4);
+}
+
+#GerarPdfBtn {
+    font-size: 1.5rem;
+    background-color: var(--cor1);
+    border: none;
+    border-radius: 5rem;
+    color: var(--cor4);
+    cursor: pointer;
+    left: 41%;
+    top: 86%;
+    position: absolute;
+    height: 10%;
+    width: 18%;
+    align-self: center;
+}
+
+
+
+#barrinha {
+    background-color: var(--cor1);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 4.375rem;
+    text-align: left;
+}
+
+#logo {
+    position: absolute;
+    height: 100%;
+    margin-left: auto;
+}
+
+
+#logoNaDireita {
+    position: absolute;
+    height: 100%;
+    margin-left: 97.5rem;
+}
+
+#divcentro {
+    display: flex;
+    background-color: var(--cor1);
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+
+#divdentro {
+    border: 3px solid var(--cor4);
+    width: 95%;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.titulo,
+.labelCadLog {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100%;
+    font-size: 250%;
+    text-align: center;
+}
+
+.labelCadLog {
+    color: var(--cor4);
+    font-size: 1.125rem;
+}
+
+
+form {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=password] {
+    width: 50rem;
+    max-width: 99%;
+    height: 1.5rem;
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    display: block;
+    /* Garante que o margin: auto funcione */
+}
+
+.inputClasse {
+    display: flex;
+    justify-content: space-between;
+    /* Espaça os inputs para ficarem nas extremidades */
+    gap: 3rem;
+    /* Espaçamento entre os inputs */
+}
+
+#txtData,
+#txtCpf {
+    height: 1.5rem;
+    width: 46%;
+    max-width: 46%;
+}
+
+#CpfTtCad {
+    position: absolute;
+    left: 50%;
+    /* Centraliza o label horizontalmente */
+    transform: translateX(60%);
+    /* Ajuste para o deslocamento à direita */
+}
+
+#entrarbtnChat {
+    width: fit-content;
+}
+
+input[type=date] {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+.RadioBtn {
+    margin-left: 9%;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.RadioBtn .Check {
+    height: 1.0625rem;
+    width: 1.375rem;
+    background-color: var(--cor1);
+    border: 0.5px solid var(--cor4);
+    /* Cor inicial verde */
+    border-radius: 2rem;
+    margin-right: 5%;
+}
+
+/* Estilos para quando o radio t está selecionado */
+input[type="radio"]:checked+.Check {
+    background-color: var(--cor4);
+    /* Cor ao ser clicado */
+    border: 0.5px solid var(--cor1);
+    /* Borda verde ao ser clicado */
+}
+
+#BtnEnvio {
+    height: 2.5rem;
+    width: 10rem;
+    cursor: pointer;
+    margin: 0 auto 1rem auto;
+    /* Centraliza horizontalmente */
+    display: block;
+    /* Garante que o margin: auto funcione */
+}
+
+
+input {
+    color: var(--cor1);
+    background-color: var(--cor2);
+    border-radius: 0.625rem;
+    border: 0.5%;
+    border-style: solid;
+    border-color: var(--cor2);
+}
+
+
+
+.menu {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 2rem;
+    height: 3.75rem;
+    position: fixed;
+    z-index: 1;
+    top: 2rem;
+}
+
+
+.hamburguer {
+    position: relative;
+    display: block;
+    background: var(--cor4);
+    width: 2rem;
+    height: 0.1875rem;
+    transition: 0.25s ease-in-out;
+}
+
+.hamburguer:before,
+.hamburguer:after {
+    background: var(--cor4);
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+}
+
+.hamburguer:before {
+    top: -0.625rem;
+}
+
+.hamburguer:after {
+    bottom: -0.625rem;
+}
+
+input:checked~label .hamburguer {
+    transform: rotate(45deg);
+}
+
+input:checked~label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input:checked~label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+
+
+.container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os containers se movam para a linha de baixo se não houver espaço suficiente */
+    justify-content: flex-start;
+    /* Alinha os items à esquerda */
+    gap: 20px;
+    /* Espaçamento entre os containers */
+    overflow-x: auto;
+    /* Caso o número de containers ultrapasse a largura da tela, ele permite o scroll horizontal */
+}
+
+.container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 5rem;
+}
+
+
+.login {
+    width: 100%;
+    max-width: 21rem;
+    background-color: var(--cor1);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+.login>h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login__form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input::placeholder {
+    color: var(--cor1);
+    /* Substitua pela cor que desejar */
+}
+
+.login__input {
+    border: none;
+    padding: 0.93rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    outline: none;
+    border-radius: 5.3rem;
+}
+
+.login__input:focus {
+    outline: 0.125rem solid var(--cor1);
+}
+
+.login__button {
+    border: none;
+    padding: 0.93rem;
+    border-radius: 10.3rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: var(--cor4);
+    cursor: pointer;
+    color: var(--cor1);
+}
+
+.login__button:hover {
+    background-color: var(--cor3);
+}
+
+.chat {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat__messages {
+    flex-grow: 1;
+    padding: 1.87rem 1.87rem 5.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat__form {
+    margin-left: 0%;
+    background-color: var(--cor5);
+    padding: 0.9rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.chat__input {
+    border: none;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    flex-grow: 1;
+    background-color: var(--cor4);
+    outline: none;
+    color: var(--cor1);
+    font-size: 1rem;
+}
+
+.chat__button {
+    border: none;
+    background: none;
+    color: var(--cor1);
+    cursor: pointer;
+    margin-right: 1.6rem;
+}
+
+.chat__button>span {
+    font-size: 1.8rem;
+}
+
+.chat__messages>div {
+    padding: 0.625rem;
+    width: 100%;
+    max-width: 15.6rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.9rem;
+    line-height: 1.37rem;
+}
+
+.message--self {
+    background-color: var(--cor1);
+    color: var(--cor5);
+    border-radius: 0.625rem 0.625rem 0 0.625rem;
+    align-self: flex-end;
+}
+
+.message--other {
+    background-color: var(--cor5);
+    color: var(--cor1);
+    border-radius: 0 0.625rem 0.625rem 0.625rem;
+    align-self: flex-start;
+}
+
+.message--sender {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--cor1);
+}
+
+/*-----SCROOLBAR-----*/
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: var(--cor1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor4);
+    /* Cor do polegar */
+    border-radius: 10px;
+    /* Deixa o polegar arredondado */
+    border: 2px solid var(--cor1);
+    /* Cor da borda do polegar */
+}
+
+#timer {
+    font-size: 2rem;
+    color: var(--cor5);
+}
+
+.inpTimer {
+    font-size: 1rem;
+    width: 60px;
+    text-align: center;
+    margin: 5px;
+}
+
+
+.anoed {
+    color: #C1D9E1;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.image-frame {
+    height: 31.25rem;
+    width: 31.25rem;
+    border-color: var(--cor4);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #006270;
+    margin-bottom: 20px;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.styleinput[type="file"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#divsessao {
+    display: flex;
+    background-color: var(--cor1);
+    border-radius: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    width: 55%;
+    gap: 3rem;
+    margin-right: 1rem;
+
+}
+
+#divdentrotimer {
+    border: 3px solid var(--cor4);
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+#divtimer {
+    text-align: center;
+}
+
+
+
+#divlista {
+    display: flex;
+    background-color: var(--cor1);
+    border-radius: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+}
+
+#divtelasessao {
+    display: flex;
+    text-align: center;
+}
+
+#list {
+    margin-top: 1rem;
+    background-color: var(--cor1);
+    color: var(--cor4);
+    border-bottom: 0.1rem solid var(--cor4);
+}
+
+.modal {
+    display: none;
+    /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo semi-transparente */
+}
+
+/* Conteúdo do modal */
+#modal-content {
+    background-color: var(--cor1);
+    margin: 15% auto;
+    padding: 20px;
+    border: 0.2rem solid var(--cor4);
+    width: 35rem;
+    text-align: center;
+    color: var(--cor4);
+    border-radius: 2rem;
+}
+
+/* Botão de fechar */
+.close {
+    color: var(--cor4);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--cor5);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Botão salvar */
+#saveButton {
+    padding: 10px 20px;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    border: none;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+#saveButton:hover {
+    background-color: var(--cor5);
+}
+
+.campoms {
+    width: 10rem;
+}
+
+#listcss {
+    background-color: var(--cor1);
+    color: var(--cor4);
+    border-bottom: 0.01rem solid var(--cor4);
+
+}
+
+.list-group-item {
+    background-color: var(--cor1);
+    /* Cor de fundo original */
+    color: var(--cor4);
+    /* Cor do texto */
+    border: none;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item.disabled {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparência preta */
+    pointer-events: none;
+    /* Desabilitar o clique */
+}
+
+/* Adicionando efeito de hover */
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Efeito de hover com leve transparência */
+}
+
+/* Garantir que a aparência não mude entre as listas */
+#listaOradores,
+#listaProximosOradores,
+#listaAcrescentarOradores {
+    list-style-type: none;
+    /* Remove marcadores da lista */
+    padding: 0;
+    margin: 0;
+}
+
+.list-group {
+    padding: 0;
+    margin: 0;
+}
+
+#divorador {
+    border: 3px solid var(--cor4);
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+#divnovorador {
+    align-items: center;
+}
+
+#desc-edicao {
+    margin-top: 5rem;
+    text-align: justify;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-color: var(--cor1);
+    width: 60%;
+    height: 100%;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 2rem;
+}
+.desc-edicao-comite{
+    margin-top: 5rem;
+    text-align: justify;
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-color: var(--cor1);
+    width: 60%;
+    height: 100%;
+    border-radius: 1rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 2rem;
+}
+
+.nome-edicao {
+    text-align: center;
+}
+
+.edicao-image {
+    object-position: center center;
+    object-fit: cover;
+    height: 25rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.comite-image {
+    object-position: center center;
+    object-fit: cover;
+    height: 20rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.textdesc {
+    resize: none;
+    width: 100%;
+    height: 10rem;
+}
+
+.orador-header {
+    display: flex;
+    justify-content: center;
+    /* Distribui o espaço entre o título e o botão */
+    align-items: center;
+    /* Alinha verticalmente os itens no centro */
+    gap: 10px;
+    /* Espaço entre o título e o botão */
+}
+
+.orador-header h2 {
+    margin-right: 10rem;
+    /* Empurra o botão para a direita (opcional, se desejar espaçamento dinâmico) */
+    margin-left: 20rem;
+}
+
+#nextorador {
+    background-color: var(--cor1);
+    border-color: var(--cor4);
+    color: var(--cor4);
+}
+
+.titulosessao {
+    color: var(--cor4);
+}
+
+/*Solicitação de Mesa*/
+.comite-item {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor1);
+}
+
+.comite-item h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.aprovar {
+    background-color: var(--cor1);
+    color: var(--cor3);
+    border: 1px solid var(--cor3);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.recusar {
+    background-color: var(--cor1);
+    color: var(--cor6);
+    border: 1px solid var(--cor6);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comite-link {
+    text-decoration: none;
+    color: var(--cor4);
+}
+
+.comite-link:hover {
+    text-decoration: underline;
+}
+
+.aprovar:hover {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+.recusar:hover {
+    background-color: var(--cor6);
+    color: var(--cor1);
+    cursor: pointer;
+}
+.date-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.date-group label {
+    white-space: nowrap;
+}
+
+.date-group input {
+    width: auto;
+}
+.botao-inscricao{
+    color: var(--cor5);
+    text-align: center;
+}
+#btnsessao {
+    height: 2.5rem;
+    width: 10rem;
+    cursor: pointer;
+    margin: 0 auto 1rem auto; /* Centraliza horizontalmente */
+    display: block; /* Garante que o margin: auto funcione */
+    background-color: var(--cor3);
+    color: var(--cor1);
+    border: 0.2rem solid var(--cor3); /* Corrigido para definir corretamente a borda */
+    border-radius: 1rem;
+}
+
+.divcentro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.perfil {
+    width: 80%;
+    max-width: 800px;
+    background-color: var(--cor1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-conteudo {
+    display: flex;
+    align-items: center;
+}
+
+.perfil-foto {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--cor4);
+    object-fit: cover;
+}
+
+.perfil-info {
+    flex: 1;
+    font-family: Arial, sans-serif;
+}
+
+.perfil-info h1 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.perfil-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+#divcertificado {
+    display: flex;
+    flex-direction: column; /* Organiza os filhos verticalmente */
+    background-color: var(--cor1);
+    border-radius: 1rem;
+    margin: 5rem 3rem 0 3rem;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+#titulo-certificado {
+    color: var(--cor4);
+    font-size: 4rem; /* Aumenta o tamanho do texto */
+    font-weight: bold; /* Torna o texto mais destacado (opcional) */
+    margin-top: 1rem;
+}
+
+.imagemcertificado {
+    width: 25rem; /* Define o tamanho da imagem */
+    height: 18rem;
+    position: absolute;
+    margin-top: 14rem; /* Espaçamento entre o texto e a imagem */
+    border: 2px solid var(--cor2);
+    transition: filter 0.3s ease;
+    filter: drop-shadow(0 0 5px var(--cor2)); /* Leve sombra padrão */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.imagemcertificado.selected {
+  filter: drop-shadow(0 0 15px var(--cor2)) brightness(0.9); /* Destaca com mais brilho e cor */
+  transform: scale(1.05);
+}
+
+.text-certificado{
+  position: absolute; 
+  margin-top: 33rem; /* Espaçamento entre o texto e a imagem */
+  color: var(--cor4);
+  font-size: 1.5rem; /* Aumenta o tamanho do texto */
+}
+
+.comite-select{
+  color: var(--cor4);
+  border-radius: 10px;
+  height: 2rem;
+  width: 20rem;
+  align-self: center;
+}
+
+
+

@@ -1,0 +1,76 @@
+:root {
+    --cor1: #C1D9E1;
+    --cor2: #348498;
+    --cor3: #0C7B93;
+    --cor4: #006270;
+    --cor5: #004D61;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.user-menu {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100%;
+    font-size: 1.1rem;
+    display: none;
+    position: absolute;
+    left: 0.8rem;
+    top: 45rem;
+    background-color: var(--cor5);
+    color: var(--cor1);
+    border: 1px solid var(--cor1);
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 100;
+    width: 14rem;
+}
+
+.user-menu.slideUp {
+    animation: slideUp 0.5s ease-out forwards;
+    display: block;
+}
+
+.user-menu.slideDown {
+    animation: slideDown 0.5s ease-out forwards;
+    display: block;
+}
+
+.user-menu a {
+    display: block;
+    padding: 10px;
+    color: var(--cor1);
+    text-decoration: none;
+}
+
+.user-menu a:hover {
+    background-color: var(--cor4);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+

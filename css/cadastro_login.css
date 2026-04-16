@@ -1,0 +1,10 @@
+#BtnCad,
+#BtnEnt {
+    position: absolute;
+    top: 20%;
+    height: 60%;
+    width: 6rem;
+    /*font-size: large*/
+    font-size: 0.9rem;
+    cursor: pointer;
+}
