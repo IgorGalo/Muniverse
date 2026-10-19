@@ -1,0 +1,6 @@
+Sempre que quiser executar:
+cd /mnt/c/Users/Cliente/OneDrive/UFSJ/Prog/Muniverse/MUNIVERSE-main
+php -S localhost:8000
+
+Depois, no navegador:
+http://localhost:8000
